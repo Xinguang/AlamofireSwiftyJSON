@@ -1,0 +1,20 @@
+language: objective-c
+xcode_project: AlamofireSwiftyJSON.xcodeproj
+osx_image: xcode7.2
+xcode_sdk: iphonesimulator8.0
+xcode_scheme: AlamofireSwiftyJSON
+
+before_install:
+  - brew update
+  - brew install carthage
+#  - gem install cocoapods
+install: carthage bootstrap --platform ios
+
+script:
+  - xctool -scheme AlamofireSwiftyJSON -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO test
+  - pod lib lint
+#  - cd demo
+#  - carthage update --platform ios
+#  - xctool -project carthage.xcodeproj -scheme demo -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+#  - pod install
+#  - xctool -workspace pod.xcworkspace -scheme pod -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
