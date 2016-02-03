@@ -19,8 +19,9 @@ class AlamofireSwiftyJSONTests: XCTestCase {
         
         Alamofire.request(.GET, URL, parameters: ["foo": "bar"]).responseSwiftyJSON { response in
             
-            print("###Success: \(response.result.isSuccess)")
-            print("###Response String: \(response.result.value)")
+//            print("###Success: \(response.result.isSuccess)")
+//            print("###Response String: \(response.result.value)")
+//            print("###Response Type: \(response.result.value.dynamicType)")
             
             expectation.fulfill()
             XCTAssertNotNil(response.request, "request should not be nil")

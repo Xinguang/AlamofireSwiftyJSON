@@ -36,9 +36,11 @@ github "starboychina/AlamofireSwiftyJSON"
 ## Usage
 
 ```swift
+let URL = "http://httpbin.org/get"
 Alamofire.request(.GET, URL, parameters: ["foo": "bar"]).responseSwiftyJSON { response in
   print("###Success: \(response.result.isSuccess)")
-  print("###Response String: \(response.result.value)")
+  //now response.result.value is SwiftyJSON.JSON type
+  print("###Value: \(response.result.value?["args"].array)")
 }
 
 ```
