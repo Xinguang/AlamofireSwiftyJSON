@@ -210,7 +210,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n/usr/local/bin/carthage copy-frameworks";
 		};
 		1773A1031C5CD8C1007039AB /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
