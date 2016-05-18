@@ -59,7 +59,9 @@ extension Request {
             guard let validData = data where validData.length > 0 else {
                 let failureReason = "JSON could not be serialized. " +
                 "Input data was nil or zero length."
-                let e = Error.errorWithCode(.JSONSerializationFailed, failureReason: failureReason)
+                let userInfo = [NSLocalizedFailureReasonErrorKey: failureReason]
+                let code = Error.Code.JSONSerializationFailed.rawValue
+                let e = NSError(domain: Error.Domain, code: code, userInfo: userInfo)
                 return .Failure(e)
             }
 

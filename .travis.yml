@@ -9,10 +9,13 @@ before_install:
   - brew install swiftlint
 #  - brew install carthage
 #  - gem install cocoapods
-install: carthage bootstrap --platform ios
+install: carthage bootstrap --platform
 
 script:
-  - xctool -scheme AlamofireSwiftyJSON -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO test
+  - xctool -scheme 'AlamofireSwiftyJSON iOS' -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO test
+  - xctool -scheme "AlamofireSwiftyJSON OSX" -sdk macosx ONLY_ACTIVE_ARCH=NO test
+  - xctool -scheme "AlamofireSwiftyJSON watchOS" -sdk watchsimulator ONLY_ACTIVE_ARCH=NO test
+  - xctool -scheme "AlamofireSwiftyJSON tvOS" -sdk appletvsimulator ONLY_ACTIVE_ARCH=NO test
   - pod lib lint --allow-warnings
 #  - cd demo
 #  - carthage update --platform ios
