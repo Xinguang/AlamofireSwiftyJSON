@@ -16,7 +16,7 @@ script:
   - xctool -scheme "AlamofireSwiftyJSON OSX" -sdk macosx ONLY_ACTIVE_ARCH=NO test
   - xctool -scheme "AlamofireSwiftyJSON watchOS" -sdk watchsimulator ONLY_ACTIVE_ARCH=NO test
   - xctool -scheme "AlamofireSwiftyJSON tvOS" -sdk appletvsimulator ONLY_ACTIVE_ARCH=NO test
-  - pod lib lint --allow-warnings
+  - pod lib lint --allow-warnings --no-clean
 #  - cd demo
 #  - carthage update --platform ios
 #  - xctool -project carthage.xcodeproj -scheme demo -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
