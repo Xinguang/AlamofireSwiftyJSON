@@ -13,6 +13,6 @@ fi
 
 cd AlamofireSwiftyJSON
 
-jazzy --theme jazzy-theme --output ./ --module-version "master"
+jazzy --theme ../jazzy-theme --output ../ --module-version "master"
 
 ```
