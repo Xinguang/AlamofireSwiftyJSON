@@ -6,6 +6,7 @@ Pod::Spec.new do |s|
   s.license = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { "starboychina" => "AlamofireSwiftyJSON.github.com@kansea.com" }
   s.source           = { :git => "https://github.com/starboychina/AlamofireSwiftyJSON.git", :tag => s.version.to_s }
+  s.documentation_url = 'http://starboychina.github.io/AlamofireSwiftyJSON/index.html'
   #s.platform     = :ios, '8.0'
 
   s.ios.deployment_target = '8.0'
