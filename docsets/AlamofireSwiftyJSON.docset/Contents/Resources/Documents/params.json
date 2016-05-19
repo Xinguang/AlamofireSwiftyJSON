@@ -1,0 +1,6 @@
+{
+  "name": "Alamofireswiftyjson",
+  "tagline": "Alamofire(3) extension for serialize NSData to SwiftyJSON(2.3)",
+  "body": "# AlamofireSwiftyJSON\r\n\r\nEasy way to use both [Alamofire](https://github.com/Alamofire/Alamofire) and [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)\r\n\r\n## Use [jazzy](https://github.com/realm/jazzy) to generate Swift documentation\r\n\r\n```sh\r\nif [ -d AlamofireSwiftyJSON ]; then\r\n  git -C AlamofireSwiftyJSON pull origin master\r\nelse\r\n  git clone --depth 1 --branch master https://github.com/starboychina/AlamofireSwiftyJSON.git AlamofireSwiftyJSON\r\nfi\r\n\r\ncd AlamofireSwiftyJSON\r\n\r\njazzy --theme ../jazzy-theme --output ../master --module-version \"master\"\r\n\r\n```\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
