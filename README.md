@@ -15,7 +15,8 @@ Easy way to use both [Alamofire](https://github.com/Alamofire/Alamofire) and [Sw
 ## Install
 
 - CocoaPods
-```
+
+```swift
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
@@ -26,11 +27,9 @@ end
 
 ```
 
-- Carthage
+- [Carthage](https://github.com/Carthage/Carthage)
 
-[Carthage](https://github.com/Carthage/Carthage)
-
-```ogdl
+```swift
 github "starboychina/AlamofireSwiftyJSON"
 ```
 
