@@ -22,13 +22,13 @@ before_install:
 install:
 - |
     if [ "$TEST_TYPE" = iOS ]; then
-      carthage bootstrap --platform iOS
+      carthage bootstrap --platform iOS --no-use-binaries
     elif [ "$TEST_TYPE" = OSX ]; then
-      carthage bootstrap --platform Mac
+      carthage bootstrap --platform Mac --no-use-binaries
     elif [ "$TEST_TYPE" = watchOS ]; then
-      carthage bootstrap --platform watchOS
+      carthage bootstrap --platform watchOS --no-use-binaries
     elif [ "$TEST_TYPE" = tvOS ]; then
-      carthage bootstrap --platform tvOS
+      carthage bootstrap --platform tvOS --no-use-binaries
     elif [ "$TEST_TYPE" = PODLINT ]; then
       git -C ~/.cocoapods/repos/master/ pull
     fi
