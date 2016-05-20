@@ -4,6 +4,7 @@
 [![SwiftLint](https://img.shields.io/badge/SwiftLint-passing-brightgreen.svg)](https://github.com/realm/SwiftLint)
 [![codecov.io](https://codecov.io/github/starboychina/AlamofireSwiftyJSON/coverage.svg?branch=master)](https://codecov.io/gh/starboychina/AlamofireSwiftyJSON?branch=master)
 [![GitHub release](https://img.shields.io/github/release/starboychina/AlamofireSwiftyJSON.svg)](https://github.com/starboychina/AlamofireSwiftyJSON/releases)
+
 ---
 Easy way to use both [Alamofire](https://github.com/Alamofire/Alamofire) and [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)
 
