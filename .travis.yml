@@ -10,6 +10,7 @@ env:
     - TEST_TYPE=OSX
     - TEST_TYPE=watchOS
     - TEST_TYPE=tvOS
+    - TEST_TYPE=PODLINT
 
 before_install:
 - |
@@ -29,6 +30,8 @@ install:
       carthage bootstrap --platform watchOS
     elif [ "$TEST_TYPE" = tvOS ]; then
       carthage bootstrap --platform tvOS
+    elif [ "$TEST_TYPE" = PODLINT ]; then
+      git -C ~/.cocoapods/repos/master/ pull
     fi
 
 script:
@@ -36,14 +39,14 @@ script:
     set -o pipefail
     if [ "$TEST_TYPE" = iOS ]; then
       xcodebuild clean test -scheme 'AlamofireSwiftyJSON iOS' -destination "platform=iOS Simulator,name=iPhone 6 Plus" -sdk iphonesimulator -enableCodeCoverage YES  ONLY_ACTIVE_ARCH=NO | xcpretty
-      git -C ~/.cocoapods/repos/master/ pull
-      pod lib lint --allow-warnings --no-clean
     elif [ "$TEST_TYPE" = OSX ]; then
       xctool -scheme "AlamofireSwiftyJSON OSX" -sdk macosx ONLY_ACTIVE_ARCH=NO test
     elif [ "$TEST_TYPE" = watchOS ]; then
       xctool -scheme "AlamofireSwiftyJSON watchOS" -sdk watchsimulator ONLY_ACTIVE_ARCH=NO test
     elif [ "$TEST_TYPE" = tvOS ]; then
       xctool -scheme "AlamofireSwiftyJSON tvOS" -sdk appletvsimulator ONLY_ACTIVE_ARCH=NO test
+    elif [ "$TEST_TYPE" = PODLINT ]; then
+      pod lib lint --allow-warnings --no-clean
     fi
 
 #  - cd demo
@@ -52,4 +55,8 @@ script:
 #  - pod install
 #  - xctool -workspace pod.xcworkspace -scheme pod -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+- |
+    set -o pipefail
+    if [ "$TEST_TYPE" = iOS ]; then
+      bash <(curl -s https://codecov.io/bash)
+    fi
