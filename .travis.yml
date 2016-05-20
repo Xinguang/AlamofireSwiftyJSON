@@ -56,7 +56,6 @@ script:
 #  - xctool -workspace pod.xcworkspace -scheme pod -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
 after_success:
 - |
-    set -o pipefail
     if [ "$TEST_TYPE" = iOS ]; then
-      bash <(curl -s https://codecov.io/bash) -J 'AlamofireSwiftyJSON iOS'
+        bash <(curl -s https://codecov.io/bash) -J 'AlamofireSwiftyJSON iOS'
     fi

@@ -35,4 +35,34 @@ class AlamofireSwiftyJSONTests: XCTestCase {
         }
     }
 
+    func testJSONResponseSerializer() {
+        let serializer = Request.SwiftyJSONResponseSerializer(options: .AllowFragments)
+
+        let error = NSError(domain: "AlamofireSwiftyJSON.test", code: 1, userInfo: ["key": "value"])
+        let errorResult = serializer.serializeResponse(nil, nil, nil, error)
+        XCTAssertEqual(errorResult.error, error, "args should be equal")
+
+        let response = NSHTTPURLResponse(URL: NSURL(), statusCode: 204,
+                                         HTTPVersion: nil, headerFields: nil)
+        let responseResult = serializer.serializeResponse(nil, response, nil, nil)
+        XCTAssertEqual(responseResult.value, JSON.null, "args should be equal")
+
+        let data = NSData()
+        let nodataResult = serializer.serializeResponse(nil, nil, data, nil)
+        let errCode = Error.Code.JSONSerializationFailed.rawValue
+        XCTAssertEqual(nodataResult.error?.code, errCode, "args should be equal")
+
+        let encode = NSUTF8StringEncoding
+
+        let str = "{\"foo\": \"bar\"}"
+        let validData = str.dataUsingEncoding(encode, allowLossyConversion: false)!
+        let dataResult = serializer.serializeResponse(nil, nil, validData, nil)
+        XCTAssertEqual(dataResult.value, ["foo": "bar"], "args should be equal")
+
+        let novalidData = "foo".dataUsingEncoding(encode, allowLossyConversion: false)!
+        let novalidDataResult = serializer.serializeResponse(nil, nil, novalidData, nil)
+        XCTAssertNotNil(novalidDataResult.error, "error should not be nil")
+
+    }
+
 }
