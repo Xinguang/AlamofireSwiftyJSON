@@ -12,8 +12,10 @@ env:
     - TEST_TYPE=tvOS
 
 before_install:
+- |
+    brew install swiftlint
+    gem install xcpretty -N --no-ri --no-rdoc
 #  - brew update
-  - brew install swiftlint
 #  - brew install carthage
 #  - gem install cocoapods
 install:
