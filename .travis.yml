@@ -58,5 +58,5 @@ after_success:
 - |
     set -o pipefail
     if [ "$TEST_TYPE" = iOS ]; then
-      bash <(curl -s https://codecov.io/bash)
+      bash <(curl -s https://codecov.io/bash) -J 'AlamofireSwiftyJSON iOS'
     fi
