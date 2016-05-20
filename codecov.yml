@@ -1,0 +1,7 @@
+comment:
+  layout: header, changes, diff
+coverage:
+  ignore:
+  - Carthage
+  - Tests
+  - Demo

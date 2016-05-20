@@ -16,13 +16,26 @@ before_install:
   - brew install swiftlint
 #  - brew install carthage
 #  - gem install cocoapods
-install: carthage bootstrap
+install:
+- |
+    set -o pipefail
+    if [ "$TEST_TYPE" = iOS ]; then
+      carthage bootstrap --platform iOS
+    elif [ "$TEST_TYPE" = OSX ]; then
+      carthage bootstrap --platform Mac
+    elif [ "$TEST_TYPE" = watchOS ]; then
+      carthage bootstrap --platform watchOS
+    elif [ "$TEST_TYPE" = tvOS ]; then
+      carthage bootstrap --platform tvOS
+    fi
 
 script:
 - |
     set -o pipefail
     if [ "$TEST_TYPE" = iOS ]; then
-      xctool -scheme 'AlamofireSwiftyJSON iOS' -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO test
+      xcodebuild clean test -scheme 'AlamofireSwiftyJSON iOS' -destination "platform=iOS Simulator,name=iPhone 6 Plus" -sdk iphonesimulator -enableCodeCoverage YES  ONLY_ACTIVE_ARCH=NO | xcpretty
+      git -C ~/.cocoapods/repos/master/ pull
+      pod lib lint --allow-warnings --no-clean
     elif [ "$TEST_TYPE" = OSX ]; then
       xctool -scheme "AlamofireSwiftyJSON OSX" -sdk macosx ONLY_ACTIVE_ARCH=NO test
     elif [ "$TEST_TYPE" = watchOS ]; then
@@ -31,9 +44,6 @@ script:
       xctool -scheme "AlamofireSwiftyJSON tvOS" -sdk appletvsimulator ONLY_ACTIVE_ARCH=NO test
     fi
 
-    git -C ~/.cocoapods/repos/master/ pull
-
-    pod lib lint --allow-warnings --no-clean
 #  - cd demo
 #  - carthage update --platform ios
 #  - xctool -project carthage.xcodeproj -scheme demo -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
