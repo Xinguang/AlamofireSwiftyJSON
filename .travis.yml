@@ -21,7 +21,6 @@ before_install:
 #  - gem install cocoapods
 install:
 - |
-    set -o pipefail
     if [ "$TEST_TYPE" = iOS ]; then
       carthage bootstrap --platform iOS
     elif [ "$TEST_TYPE" = OSX ]; then
@@ -36,9 +35,8 @@ install:
 
 script:
 - |
-    set -o pipefail
     if [ "$TEST_TYPE" = iOS ]; then
-      xcodebuild clean test -scheme 'AlamofireSwiftyJSON iOS' -destination "platform=iOS Simulator,name=iPhone 6 Plus" -sdk iphonesimulator -enableCodeCoverage YES  ONLY_ACTIVE_ARCH=NO | xcpretty
+      xcodebuild clean test -scheme 'AlamofireSwiftyJSON iOS' -destination "platform=iOS Simulator,name=iPhone 6 Plus" -sdk iphonesimulator -enableCodeCoverage YES  ONLY_ACTIVE_ARCH=YES | xcpretty
     elif [ "$TEST_TYPE" = OSX ]; then
       xctool -scheme "AlamofireSwiftyJSON OSX" -sdk macosx ONLY_ACTIVE_ARCH=NO test
     elif [ "$TEST_TYPE" = watchOS ]; then
