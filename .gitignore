@@ -171,3 +171,5 @@ xcuserdata
 Carthage
 
 Cartfile.resolved
+.build
+Packages
