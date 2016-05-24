@@ -9,4 +9,4 @@ fi
 
 cd AlamofireSwiftyJSON
 
-jazzy --theme ../jazzy-theme --output ../ --module-version "master"
+jazzy --config ../.jazzy.json --output ../ --module-version "master"
