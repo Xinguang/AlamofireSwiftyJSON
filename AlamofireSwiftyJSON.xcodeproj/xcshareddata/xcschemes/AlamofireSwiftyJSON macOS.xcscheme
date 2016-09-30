@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D0C479AE1CEC169400CD01FD"
                BuildableName = "AlamofireSwiftyJSON.framework"
-               BlueprintName = "AlamofireSwiftyJSON OSX"
+               BlueprintName = "AlamofireSwiftyJSON macOS"
                ReferencedContainer = "container:AlamofireSwiftyJSON.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D0C479BA1CEC16EF00CD01FD"
+               BuildableName = "AlamofireSwiftyJSON macOS Tests.xctest"
+               BlueprintName = "AlamofireSwiftyJSON macOS Tests"
+               ReferencedContainer = "container:AlamofireSwiftyJSON.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D0C479AE1CEC169400CD01FD"
+            BuildableName = "AlamofireSwiftyJSON.framework"
+            BlueprintName = "AlamofireSwiftyJSON macOS"
+            ReferencedContainer = "container:AlamofireSwiftyJSON.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -47,7 +66,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D0C479AE1CEC169400CD01FD"
             BuildableName = "AlamofireSwiftyJSON.framework"
-            BlueprintName = "AlamofireSwiftyJSON OSX"
+            BlueprintName = "AlamofireSwiftyJSON macOS"
             ReferencedContainer = "container:AlamofireSwiftyJSON.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -65,7 +84,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D0C479AE1CEC169400CD01FD"
             BuildableName = "AlamofireSwiftyJSON.framework"
-            BlueprintName = "AlamofireSwiftyJSON OSX"
+            BlueprintName = "AlamofireSwiftyJSON macOS"
             ReferencedContainer = "container:AlamofireSwiftyJSON.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

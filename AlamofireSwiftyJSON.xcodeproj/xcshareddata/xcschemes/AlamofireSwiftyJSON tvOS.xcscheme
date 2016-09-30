@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D0C479E31CEC173D00CD01FD"
+               BuildableName = "AlamofireSwiftyJSON tvOS Tests.xctest"
+               BlueprintName = "AlamofireSwiftyJSON tvOS Tests"
+               ReferencedContainer = "container:AlamofireSwiftyJSON.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D0C479D71CEC172600CD01FD"
+            BuildableName = "AlamofireSwiftyJSON.framework"
+            BlueprintName = "AlamofireSwiftyJSON tvOS"
+            ReferencedContainer = "container:AlamofireSwiftyJSON.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>

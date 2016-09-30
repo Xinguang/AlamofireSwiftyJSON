@@ -36,7 +36,7 @@
 			containerPortal = 1773A0D31C5CD6FF007039AB /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D0C479AE1CEC169400CD01FD;
-			remoteInfo = "AlamofireSwiftyJSON OSX";
+			remoteInfo = "AlamofireSwiftyJSON macOS";
 		};
 		D0C479EA1CEC173D00CD01FD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -54,7 +54,7 @@
 		1773A0FC1C5CD80E007039AB /* AlamofireSwiftyJSONTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireSwiftyJSONTests.swift; sourceTree = "<group>"; };
 		1773A1041C5CDB55007039AB /* AlamofireSwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireSwiftyJSON.swift; sourceTree = "<group>"; };
 		D0C479AF1CEC169400CD01FD /* AlamofireSwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlamofireSwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D0C479BB1CEC16EF00CD01FD /* AlamofireSwiftyJSON OSX Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AlamofireSwiftyJSON OSX Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0C479BB1CEC16EF00CD01FD /* AlamofireSwiftyJSON macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AlamofireSwiftyJSON macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C479CB1CEC170A00CD01FD /* AlamofireSwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlamofireSwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C479D81CEC172600CD01FD /* AlamofireSwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlamofireSwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C479E41CEC173D00CD01FD /* AlamofireSwiftyJSON tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AlamofireSwiftyJSON tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,7 +138,7 @@
 				1773A0DC1C5CD700007039AB /* AlamofireSwiftyJSON.framework */,
 				1773A0E61C5CD700007039AB /* AlamofireSwiftyJSON iOS Tests.xctest */,
 				D0C479AF1CEC169400CD01FD /* AlamofireSwiftyJSON.framework */,
-				D0C479BB1CEC16EF00CD01FD /* AlamofireSwiftyJSON OSX Tests.xctest */,
+				D0C479BB1CEC16EF00CD01FD /* AlamofireSwiftyJSON macOS Tests.xctest */,
 				D0C479CB1CEC170A00CD01FD /* AlamofireSwiftyJSON.framework */,
 				D0C479D81CEC172600CD01FD /* AlamofireSwiftyJSON.framework */,
 				D0C479E41CEC173D00CD01FD /* AlamofireSwiftyJSON tvOS Tests.xctest */,
@@ -262,9 +262,9 @@
 			productReference = 1773A0E61C5CD700007039AB /* AlamofireSwiftyJSON iOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		D0C479AE1CEC169400CD01FD /* AlamofireSwiftyJSON OSX */ = {
+		D0C479AE1CEC169400CD01FD /* AlamofireSwiftyJSON macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D0C479B41CEC169400CD01FD /* Build configuration list for PBXNativeTarget "AlamofireSwiftyJSON OSX" */;
+			buildConfigurationList = D0C479B41CEC169400CD01FD /* Build configuration list for PBXNativeTarget "AlamofireSwiftyJSON macOS" */;
 			buildPhases = (
 				D0C479AA1CEC169400CD01FD /* Sources */,
 				D0C479AB1CEC169400CD01FD /* Frameworks */,
@@ -276,14 +276,14 @@
 			);
 			dependencies = (
 			);
-			name = "AlamofireSwiftyJSON OSX";
-			productName = "AlamofireSwiftyJSON OSX";
+			name = "AlamofireSwiftyJSON macOS";
+			productName = "AlamofireSwiftyJSON macOS";
 			productReference = D0C479AF1CEC169400CD01FD /* AlamofireSwiftyJSON.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D0C479BA1CEC16EF00CD01FD /* AlamofireSwiftyJSON OSX Tests */ = {
+		D0C479BA1CEC16EF00CD01FD /* AlamofireSwiftyJSON macOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D0C479C31CEC16EF00CD01FD /* Build configuration list for PBXNativeTarget "AlamofireSwiftyJSON OSX Tests" */;
+			buildConfigurationList = D0C479C31CEC16EF00CD01FD /* Build configuration list for PBXNativeTarget "AlamofireSwiftyJSON macOS Tests" */;
 			buildPhases = (
 				D0C479B71CEC16EF00CD01FD /* Sources */,
 				D0C479B81CEC16EF00CD01FD /* Frameworks */,
@@ -295,9 +295,9 @@
 			dependencies = (
 				D0C479C21CEC16EF00CD01FD /* PBXTargetDependency */,
 			);
-			name = "AlamofireSwiftyJSON OSX Tests";
-			productName = "AlamofireSwiftyJSON OSX Tests";
-			productReference = D0C479BB1CEC16EF00CD01FD /* AlamofireSwiftyJSON OSX Tests.xctest */;
+			name = "AlamofireSwiftyJSON macOS Tests";
+			productName = "AlamofireSwiftyJSON macOS Tests";
+			productReference = D0C479BB1CEC16EF00CD01FD /* AlamofireSwiftyJSON macOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		D0C479CA1CEC170A00CD01FD /* AlamofireSwiftyJSON watchOS */ = {
@@ -369,15 +369,19 @@
 				TargetAttributes = {
 					1773A0DB1C5CD6FF007039AB = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
 					};
 					1773A0E51C5CD700007039AB = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
 					};
 					D0C479AE1CEC169400CD01FD = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 					D0C479BA1CEC16EF00CD01FD = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 					D0C479CA1CEC170A00CD01FD = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -404,8 +408,8 @@
 			targets = (
 				1773A0DB1C5CD6FF007039AB /* AlamofireSwiftyJSON iOS */,
 				1773A0E51C5CD700007039AB /* AlamofireSwiftyJSON iOS Tests */,
-				D0C479AE1CEC169400CD01FD /* AlamofireSwiftyJSON OSX */,
-				D0C479BA1CEC16EF00CD01FD /* AlamofireSwiftyJSON OSX Tests */,
+				D0C479AE1CEC169400CD01FD /* AlamofireSwiftyJSON macOS */,
+				D0C479BA1CEC16EF00CD01FD /* AlamofireSwiftyJSON macOS Tests */,
 				D0C479CA1CEC170A00CD01FD /* AlamofireSwiftyJSON watchOS */,
 				D0C479D71CEC172600CD01FD /* AlamofireSwiftyJSON tvOS */,
 				D0C479E31CEC173D00CD01FD /* AlamofireSwiftyJSON tvOS Tests */,
@@ -509,7 +513,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n/usr/local/bin/carthage copy-frameworks";
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 		D0C479F01CEC177200CD01FD /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -524,7 +528,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n/usr/local/bin/carthage copy-frameworks";
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 		D0C479F11CEC177A00CD01FD /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -539,7 +543,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n/usr/local/bin/carthage copy-frameworks";
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 		D0C47A0B1CEC3C2000CD01FD /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -640,7 +644,7 @@
 		};
 		D0C479C21CEC16EF00CD01FD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D0C479AE1CEC169400CD01FD /* AlamofireSwiftyJSON OSX */;
+			target = D0C479AE1CEC169400CD01FD /* AlamofireSwiftyJSON macOS */;
 			targetProxy = D0C479C11CEC16EF00CD01FD /* PBXContainerItemProxy */;
 		};
 		D0C479EB1CEC173D00CD01FD /* PBXTargetDependency */ = {
@@ -688,8 +692,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -730,8 +734,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -756,6 +760,7 @@
 				PRODUCT_NAME = AlamofireSwiftyJSON;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -774,6 +779,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kansea.AlamofireSwiftyJSON;
 				PRODUCT_NAME = AlamofireSwiftyJSON;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -785,6 +791,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kansea.AlamofireSwiftyJSONTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -796,6 +803,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kansea.AlamofireSwiftyJSONTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -814,11 +822,11 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info-OSX.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kansea.AlamofireSwiftyJSON;
 				PRODUCT_NAME = AlamofireSwiftyJSON;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -837,11 +845,11 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info-OSX.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kansea.AlamofireSwiftyJSON;
 				PRODUCT_NAME = AlamofireSwiftyJSON;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -858,6 +866,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kansea.AlamofireSwiftyJSON-OSX-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -874,6 +883,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kansea.AlamofireSwiftyJSON-OSX-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -894,6 +904,7 @@
 				PRODUCT_NAME = AlamofireSwiftyJSON;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.2;
 			};
@@ -916,6 +927,7 @@
 				PRODUCT_NAME = AlamofireSwiftyJSON;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.2;
 			};
@@ -937,6 +949,7 @@
 				PRODUCT_NAME = AlamofireSwiftyJSON;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -958,6 +971,7 @@
 				PRODUCT_NAME = AlamofireSwiftyJSON;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -973,6 +987,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kansea.AlamofireSwiftyJSON-tvOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 			};
 			name = Debug;
@@ -987,6 +1002,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kansea.AlamofireSwiftyJSON-tvOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 			};
 			name = Release;
@@ -1021,21 +1037,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D0C479B41CEC169400CD01FD /* Build configuration list for PBXNativeTarget "AlamofireSwiftyJSON OSX" */ = {
+		D0C479B41CEC169400CD01FD /* Build configuration list for PBXNativeTarget "AlamofireSwiftyJSON macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D0C479B51CEC169400CD01FD /* Debug */,
 				D0C479B61CEC169400CD01FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		D0C479C31CEC16EF00CD01FD /* Build configuration list for PBXNativeTarget "AlamofireSwiftyJSON OSX Tests" */ = {
+		D0C479C31CEC16EF00CD01FD /* Build configuration list for PBXNativeTarget "AlamofireSwiftyJSON macOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D0C479C41CEC16EF00CD01FD /* Debug */,
 				D0C479C51CEC16EF00CD01FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D0C479D01CEC170A00CD01FD /* Build configuration list for PBXNativeTarget "AlamofireSwiftyJSON watchOS" */ = {
 			isa = XCConfigurationList;
@@ -1044,6 +1062,7 @@
 				D0C479D21CEC170A00CD01FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D0C479DD1CEC172600CD01FD /* Build configuration list for PBXNativeTarget "AlamofireSwiftyJSON tvOS" */ = {
 			isa = XCConfigurationList;
@@ -1052,6 +1071,7 @@
 				D0C479DF1CEC172600CD01FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D0C479EC1CEC173D00CD01FD /* Build configuration list for PBXNativeTarget "AlamofireSwiftyJSON tvOS Tests" */ = {
 			isa = XCConfigurationList;
@@ -1060,6 +1080,7 @@
 				D0C479EE1CEC173D00CD01FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

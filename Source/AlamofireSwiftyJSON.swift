@@ -5,74 +5,90 @@
 //  Created by Hikaru on 2016/01/29.
 //  Copyright © 2016年 Hikaru. All rights reserved.
 //
-
-import Foundation
-
 import Alamofire
 import SwiftyJSON
 
-// MARK: - Request for Swift JSON
+/// A set of HTTP response status code that do not contain response data.
+private let emptyDataStatusCodes: Set<Int> = [204, 205]
 
-extension Request {
-    /**
-     Adds a handler to be called once the request has finished.
+// MARK: - Request for SwiftyJSON
 
-     - parameter queue:             The queue on which the completion handler is dispatched.
-     - parameter options:           The JSON serialization reading options.
-                                    `.AllowFragments` by default.
-     - parameter completionHandler: A closure to be executed once the request has finished.
-
-     - returns: The request.
-     */
-    public func responseSwiftyJSON(
-        queue: dispatch_queue_t? = nil,
-        options: NSJSONReadingOptions = .AllowFragments,
-        completionHandler: Response<JSON, NSError> -> Void)
-        -> Self {
-            return response(
-                queue: queue,
-                responseSerializer: Request.SwiftyJSONResponseSerializer(options: options),
-                completionHandler: completionHandler
-            )
-    }
-
-    /**
-     Creates a response serializer that returns a SwiftyJSON object constructed
-     from the response data using `NSJSONSerialization`
-     with the specified reading options.
-
-     - parameter options: The SwiftyJSON serialization reading options.
-                          `.AllowFragments` by default.
-
-     - returns: A SwiftyJSON object response serializer.
-     */
-    public static func SwiftyJSONResponseSerializer(
-        options options: NSJSONReadingOptions = .AllowFragments)
-        -> ResponseSerializer<JSON, NSError> {
-        return ResponseSerializer { _, response, data, error in
-            guard error == nil else { return .Failure(error!) }
-
-            if let response = response where response.statusCode == 204 {
-                return .Success(JSON.null)
-            }
-
-            guard let validData = data where validData.length > 0 else {
-                let failureReason = "JSON could not be serialized. " +
-                "Input data was nil or zero length."
-                let userInfo = [NSLocalizedFailureReasonErrorKey: failureReason]
-                let code = Error.Code.JSONSerializationFailed.rawValue
-                let e = NSError(domain: Error.Domain, code: code, userInfo: userInfo)
-                return .Failure(e)
-            }
-
-            do {
-                let json = try NSJSONSerialization.JSONObjectWithData(validData, options: options)
-
-                return .Success(JSON(json))
-            } catch {
-                return .Failure(error as NSError)
-            }
+extension DataRequest {
+    /// Creates a response serializer that
+    /// returns a SwiftyJSON object result type constructed from the response data using
+    /// `JSONSerialization` with the specified reading options.
+    ///
+    /// - parameter options: The JSON serialization reading options. Defaults to `.allowFragments`.
+    ///
+    /// - returns: A JSON object response serializer.
+    public static func serializeResponseSwiftyJSON(
+        options: JSONSerialization.ReadingOptions = .allowFragments)
+        -> DataResponseSerializer<JSON> {
+        return DataResponseSerializer { _, response, data, error in
+            return Request.serializeResponseSwiftyJSON(options: options,
+                                                       response: response,
+                                                       data: data,
+                                                       error: error)
         }
     }
 
+    /// Adds a handler to be called once the request has finished.
+    ///
+    /// - parameter options:
+    ///     The JSON serialization reading options. Defaults to `.allowFragments`.
+    /// - parameter completionHandler: A closure to be executed once the request has finished.
+    ///
+    /// - returns: The request.
+    @discardableResult
+    public func responseSwiftyJSON(
+        queue: DispatchQueue? = nil,
+        options: JSONSerialization.ReadingOptions = .allowFragments,
+        completionHandler: @escaping (DataResponse<JSON>) -> Void)
+        -> Self {
+        return response(
+            queue: queue,
+            responseSerializer: DataRequest.serializeResponseSwiftyJSON(options: options),
+            completionHandler: completionHandler
+        )
+    }
+}
+
+// MARK: - JSON
+
+extension Request {
+    /// Returns a JSON object contained in a result type constructed
+    /// from the response data using `JSONSerialization`
+    /// with the specified reading options.
+    ///
+    /// - parameter options:  The JSON serialization reading options. Defaults to `.allowFragments`.
+    /// - parameter response: The response from the server.
+    /// - parameter data:     The data returned from the server.
+    /// - parameter error:    The error already encountered if it exists.
+    ///
+    /// - returns: The result data type.
+    public static func serializeResponseSwiftyJSON(
+        options: JSONSerialization.ReadingOptions,
+        response: HTTPURLResponse?,
+        data: Data?,
+        error: Error?)
+        -> Result<JSON> {
+        guard error == nil else { return .failure(error!) }
+
+        if let response = response, emptyDataStatusCodes.contains(response.statusCode) {
+            return .success(JSON.null)
+        }
+
+        guard let validData = data, !validData.isEmpty else {
+            return .failure(AFError.responseSerializationFailed(reason: .inputDataNilOrZeroLength))
+        }
+
+        do {
+            let json = try JSONSerialization.jsonObject(with: validData, options: options)
+
+            return .success(JSON(json))
+        } catch {
+            return .failure(AFError.responseSerializationFailed(
+                                reason: .jsonSerializationFailed(error: error)))
+        }
+    }
 }
