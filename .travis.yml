@@ -44,9 +44,9 @@ script:
     elif [ "$TEST_TYPE" = OSX ]; then
       xcodebuild -scheme "AlamofireSwiftyJSON macOS" -sdk macosx ONLY_ACTIVE_ARCH=NO test
     elif [ "$TEST_TYPE" = watchOS ]; then
-      xcodebuild -scheme "AlamofireSwiftyJSON watchOS" -sdk watchsimulator ONLY_ACTIVE_ARCH=NO test
+      xcodebuild -scheme "AlamofireSwiftyJSON watchOS" -sdk watchsimulator ONLY_ACTIVE_ARCH=NO build
     elif [ "$TEST_TYPE" = tvOS ]; then
-      xcodebuild -scheme "AlamofireSwiftyJSON tvOS" -sdk appletvsimulator ONLY_ACTIVE_ARCH=NO test
+      xcodebuild -scheme "AlamofireSwiftyJSON tvOS" -sdk appletvsimulator ONLY_ACTIVE_ARCH=NO build
     elif [ "$TEST_TYPE" = PODLINT ]; then
       pod lib lint --allow-warnings --no-clean
     fi
