@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang='en'>
   <head>
-    <title>Request Extension Reference</title>
+    <title>DataRequest Extension Reference</title>
     <link rel='stylesheet' type='text/css' href='../css/jazzy.css' />
     <link rel='stylesheet' type='text/css' href='../css/highlight.css' />
     <meta charset='utf-8'>
@@ -10,9 +10,9 @@
   </head>
   <body>
 
-    <a name='//apple_ref/swift/Extension/Request' class='dashAnchor'></a>
+    <a name='//apple_ref/swift/Extension/DataRequest' class='dashAnchor'></a>
 
-    <a title='Request Extension Reference'></a>
+    <a title='DataRequest Extension Reference'></a>
 
     <header class='header'>
       <p class='header-col header-col--primary'>
@@ -40,7 +40,7 @@
     <p class='breadcrumbs'>
       <a class='breadcrumb' href='../index.html'>AlamofireSwiftyJSON Reference</a>
       <img class='carat' src='../img/carat.png' />
-      Request Extension Reference
+      DataRequest Extension Reference
     </p>
 
     <div class='content-wrapper'>
@@ -63,7 +63,7 @@
 
         <section class='section'>
           <div class='section-content'>
-            <h1>Request</h1>
+            <h1>DataRequest</h1>
             <p>Undocumented</p>
 
           </div>
@@ -77,8 +77,8 @@
                   <div>
                     <code>
                     <a name="/s:ZF19AlamofireSwiftyJSON27serializeResponseSwiftyJSONERR"></a>
-                    <a name="//apple_ref/swift/Method/serializeResponseSwiftyJSON(options:response:data:error:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:ZF19AlamofireSwiftyJSON27serializeResponseSwiftyJSONERR">serializeResponseSwiftyJSON(options:response:data:error:)</a>
+                    <a name="//apple_ref/swift/Method/serializeResponseSwiftyJSON(options:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZF19AlamofireSwiftyJSON27serializeResponseSwiftyJSONERR">serializeResponseSwiftyJSON(options:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -86,9 +86,9 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns a JSON object contained in a result type constructed
-from the response data using <code>JSONSerialization</code>
-with the specified reading options.</p>
+                        <p>Creates a response serializer that
+returns a SwiftyJSON object result type constructed from the response data using
+<code>JSONSerialization</code> with the specified reading options.</p>
 
                       </div>
                       <div class="declaration">
@@ -96,11 +96,67 @@ with the specified reading options.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">serializeResponseSwiftyJSON</span><span class="p">(</span>
-        <span class="nv">options</span><span class="p">:</span> <span class="kt">JSONSerialization</span><span class="o">.</span><span class="kt">ReadingOptions</span><span class="p">,</span>
-        <span class="nv">response</span><span class="p">:</span> <span class="kt">HTTPURLResponse</span><span class="p">?,</span>
-        <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?,</span>
-        <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span>
-        <span class="o">-&gt;</span> <span class="kt">Result</span><span class="o">&lt;</span><span class="kt">JSON</span><span class="o">&gt;</span></code></pre>
+        <span class="nv">options</span><span class="p">:</span> <span class="kt">JSONSerialization</span><span class="o">.</span><span class="kt">ReadingOptions</span> <span class="o">=</span> <span class="o">.</span><span class="n">allowFragments</span><span class="p">)</span>
+        <span class="o">-&gt;</span> <span class="kt">DataResponseSerializer</span><span class="o">&lt;</span><span class="kt">JSON</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>options</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The JSON serialization reading options. Defaults to <code>.allowFragments</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A JSON object response serializer.</p>
+
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/starboychina/AlamofireSwiftyJSON/tree/master/Source/AlamofireSwiftyJSON.swift#L24-L33">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:F19AlamofireSwiftyJSON18responseSwiftyJSONERR"></a>
+                    <a name="//apple_ref/swift/Method/responseSwiftyJSON(queue:options:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:F19AlamofireSwiftyJSON18responseSwiftyJSONERR">responseSwiftyJSON(queue:options:completionHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a handler to be called once the request has finished.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">responseSwiftyJSON</span><span class="p">(</span>
+        <span class="nv">queue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+        <span class="nv">options</span><span class="p">:</span> <span class="kt">JSONSerialization</span><span class="o">.</span><span class="kt">ReadingOptions</span> <span class="o">=</span> <span class="o">.</span><span class="n">allowFragments</span><span class="p">,</span>
+        <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">DataResponse</span><span class="o">&lt;</span><span class="kt">JSON</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span>
+        <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -124,38 +180,12 @@ with the specified reading options.</p>
                             <tr>
                               <td>
                                 <code>
-                                <em>response</em>
+                                <em>completionHandler</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The response from the server.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>data</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The data returned from the server.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>error</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The error already encountered if it exists.</p>
+                                  <p>A closure to be executed once the request has finished.</p>
 
                                 </div>
                               </td>
@@ -165,11 +195,11 @@ with the specified reading options.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The result data type.</p>
+                        <p>The request.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/starboychina/AlamofireSwiftyJSON/tree/master/Source/AlamofireSwiftyJSON.swift#L69-L93">Show on GitHub</a>
+                        <a href="https://github.com/starboychina/AlamofireSwiftyJSON/tree/master/Source/AlamofireSwiftyJSON.swift#L43-L53">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
