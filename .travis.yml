@@ -19,6 +19,8 @@ before_install:
       if ! which swiftlint >/dev/null; then
         brew install swiftlint
       fi
+    elif [ "$TEST_TYPE" = PODLINT ]; then
+      gem install cocoapods --pre --no-rdoc --no-ri --no-document --quiet
     fi
 #  - brew update
 #  - brew install carthage
