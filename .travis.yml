@@ -19,6 +19,7 @@ before_install:
       if ! which swiftlint >/dev/null; then
         brew install swiftlint
       fi
+      gem install xcpretty -N --no-ri --no-rdoc
     elif [ "$TEST_TYPE" = PODLINT ]; then
       gem install cocoapods --pre --no-rdoc --no-ri --no-document --quiet
     fi
@@ -42,7 +43,7 @@ install:
 script:
 - |
     if [ "$TEST_TYPE" = iOS ]; then
-      xcodebuild clean test -scheme 'AlamofireSwiftyJSON iOS' -destination "platform=iOS Simulator,name=iPhone 7 Plus" -sdk iphonesimulator -enableCodeCoverage YES  ONLY_ACTIVE_ARCH=YES | xcpretty
+      xcodebuild clean test -scheme 'AlamofireSwiftyJSON iOS' -destination "platform=iOS Simulator,name=iPhone 7 Plus" -sdk iphonesimulator -enableCodeCoverage YES | xcpretty
     elif [ "$TEST_TYPE" = OSX ]; then
       xcodebuild -scheme "AlamofireSwiftyJSON macOS" -sdk macosx ONLY_ACTIVE_ARCH=NO test
     elif [ "$TEST_TYPE" = watchOS ]; then
