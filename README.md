@@ -11,8 +11,9 @@ Easy way to use both [Alamofire](https://github.com/Alamofire/Alamofire) and [Sw
 
 ## Requirements
 
-- iOS 9.0+ / Mac OS X 10.11+
-- Xcode 8.0
+- iOS 8.0+ / macOS 10.10+ / tvOS 9.0+ / watchOS 2.0+
+- Xcode 8.1+
+- Swift 3.0+
 
 ## Install
 
