@@ -62,5 +62,5 @@ script:
 after_success:
 - |
     if [ "$TEST_TYPE" = iOS ]; then
-        bash <(curl -s https://codecov.io/bash) -J 'AlamofireSwiftyJSON iOS'
+        bash <(curl -s https://codecov.io/bash) -X xcodeplist -J 'AlamofireSwiftyJSON iOS'
     fi
