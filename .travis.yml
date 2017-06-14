@@ -36,8 +36,8 @@ install:
       carthage bootstrap --platform watchOS --no-use-binaries
     elif [ "$TEST_TYPE" = tvOS ]; then
       carthage bootstrap --platform tvOS --no-use-binaries
-    elif [ "$TEST_TYPE" = PODLINT ]; then
-      git -C ~/.cocoapods/repos/master/ pull
+    # elif [ "$TEST_TYPE" = PODLINT ]; then
+    #   git -C ~/.cocoapods/repos/master/ pull
     fi
 
 script:
