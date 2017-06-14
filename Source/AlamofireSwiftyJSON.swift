@@ -82,13 +82,15 @@ extension Request {
             return .failure(AFError.responseSerializationFailed(reason: .inputDataNilOrZeroLength))
         }
 
-        do {
-            let json = try JSONSerialization.jsonObject(with: validData, options: options)
+        var res: Result<JSON>!
 
-            return .success(JSON(json))
+        do {
+          let json = try JSONSerialization.jsonObject(with: validData, options: options)
+          res = .success(JSON(json))
         } catch {
-            return .failure(AFError.responseSerializationFailed(
+          res = .failure(AFError.responseSerializationFailed(
                                 reason: .jsonSerializationFailed(error: error)))
         }
+        return res
     }
 }

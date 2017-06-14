@@ -36,8 +36,8 @@ class AlamofireSwiftyJSONTests: XCTestCase {
         let expectation = self.expectation(description: "\(URL)")
         let parameters = ["foo": "bar"]
 
-        Alamofire.request(URL, method: .get, parameters: parameters).responseSwiftyJSON {
-            response in
+        Alamofire.request(URL, method: .get, parameters: parameters)
+            .responseSwiftyJSON { response in
                 expectation.fulfill()
                 XCTAssertNotNil(response.request, "request should not be nil")
                 XCTAssertNotNil(response.response, "response should not be nil")
@@ -45,9 +45,9 @@ class AlamofireSwiftyJSONTests: XCTestCase {
                 let jsonParameters = SwiftyJSON.JSON(parameters)
                 let args = response.result.value?["args"]
                 XCTAssertEqual(args, jsonParameters, "args should be equal")
-        }
+            }
         waitForExpectations(timeout: 10) { error in
-            XCTAssertNil(error, "\(error)")
+            XCTAssertNil(error, String(describing: error))
         }
     }
 
