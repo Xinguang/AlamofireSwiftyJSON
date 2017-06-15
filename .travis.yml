@@ -37,7 +37,7 @@ install:
     elif [ "$TEST_TYPE" = tvOS ]; then
       carthage bootstrap --platform tvOS --no-use-binaries
     elif [ "$TEST_TYPE" = PODLINT ]; then
-      pod repo update
+      pod repo update > podrepoupdate.log
       # git -C ~/.cocoapods/repos/master/ pull
     fi
 
