@@ -1,6 +1,6 @@
 # AlamofireSwiftyJSON
 
-[![Build Status](https://travis-ci.org/starboychina/AlamofireSwiftyJSON.svg)](https://travis-ci.org/starboychina/AlamofireSwiftyJSON)
+[![Build Status](https://travis-ci.org/Xinguang/AlamofireSwiftyJSON.svg)](https://travis-ci.org/Xinguang/AlamofireSwiftyJSON)
 [![Swift version](https://img.shields.io/badge/swift-3.0-orange.svg)](https://developer.apple.com/swift/)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![SwiftLint](https://img.shields.io/badge/SwiftLint-passing-brightgreen.svg)](https://github.com/realm/SwiftLint)
