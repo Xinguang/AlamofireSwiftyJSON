@@ -1,9 +1,9 @@
 
 {
-    "author": "starboychina",
-    "author_url": "https://github.com/starboychina",
-    "root_url": "http://blog.kansea.com/AlamofireSwiftyJSON/",
-    "github_url": "https://github.com/starboychina/AlamofireSwiftyJSON",
-    "github_file_prefix": "https://github.com/starboychina/AlamofireSwiftyJSON/tree/master",
+    "author": "xinguang",
+    "author_url": "https://github.com/xinguang",
+    "root_url": "https://xinguang.github.io/AlamofireSwiftyJSON/",
+    "github_url": "https://github.com/xinguang/AlamofireSwiftyJSON",
+    "github_file_prefix": "https://github.com/xinguang/AlamofireSwiftyJSON/tree/master",
     "theme": "jazzy-theme"
 }
