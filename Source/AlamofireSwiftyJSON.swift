@@ -6,6 +6,8 @@
 //  Copyright © 2016年 Hikaru. All rights reserved.
 //
 import Alamofire
+import Dispatch
+import Foundation
 import SwiftyJSON
 
 /// A set of HTTP response status code that do not contain response data.
