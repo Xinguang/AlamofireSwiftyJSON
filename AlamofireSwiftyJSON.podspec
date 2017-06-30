@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
   s.name             = "AlamofireSwiftyJSON"
-  s.version          = "0.2.0"
-  s.summary          = "Alamofire extension for serialize NSData to SwiftyJSON "
-  s.homepage         = "https://github.com/starboychina/AlamofireSwiftyJSON"
+  s.version          = "1.0.0"
+  s.summary          = "Alamofire extension for serialize Data to SwiftyJSON "
+  s.homepage         = "https://github.com/Xinguang/AlamofireSwiftyJSON"
   s.license = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { "starboychina" => "AlamofireSwiftyJSON.github.com@kansea.com" }
-  s.source           = { :git => "https://github.com/starboychina/AlamofireSwiftyJSON.git", :tag => s.version.to_s }
-  s.documentation_url = 'http://starboychina.github.io/AlamofireSwiftyJSON/index.html'
+  s.author           = { "Xinguang" => "AlamofireSwiftyJSON.github.com@kansea.com" }
+  s.source           = { :git => "https://github.com/Xinguang/AlamofireSwiftyJSON.git", :tag => s.version.to_s }
+  s.documentation_url = 'http://Xinguang.github.io/AlamofireSwiftyJSON/index.html'
   #s.platform     = :ios, '8.0'
 
   s.ios.deployment_target = '8.0'

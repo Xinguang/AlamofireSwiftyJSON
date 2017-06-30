@@ -1,6 +1,6 @@
 language: objective-c
 xcode_project: AlamofireSwiftyJSON.xcodeproj
-osx_image: xcode8
+osx_image: xcode8.3
 xcode_sdk: iphonesimulator10.0
 xcode_scheme: AlamofireSwiftyJSON
 

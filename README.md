@@ -5,7 +5,7 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![CocoaPods compatible](https://img.shields.io/badge/CocoaPods-compatible-4BC51D.svg?style=flat)](https://cocoapods.org/pods/AlamofireSwiftyJSON)
 [![SwiftLint](https://img.shields.io/badge/SwiftLint-passing-brightgreen.svg)](https://github.com/realm/SwiftLint)
-[![codecov.io](https://codecov.io/github/xinguang/AlamofireSwiftyJSON/coverage.svg?branch=master)](https://codecov.io/gh/xinguang/AlamofireSwiftyJSON?branch=master)
+[![codecov.io](https://codecov.io/gh/xinguang/AlamofireSwiftyJSON/branch/master/graph/badge.svg)](https://codecov.io/gh/xinguang/AlamofireSwiftyJSON?branch=master)
 [![GitHub release](https://img.shields.io/github/release/xinguang/AlamofireSwiftyJSON.svg)](https://github.com/xinguang/AlamofireSwiftyJSON/releases)
 
 ---
