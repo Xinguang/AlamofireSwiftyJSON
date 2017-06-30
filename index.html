@@ -65,12 +65,13 @@
             
             <h1 id='alamofireswiftyjson' class='heading'>AlamofireSwiftyJSON</h1>
 
-<p><a href="https://travis-ci.org/starboychina/AlamofireSwiftyJSON"><img src="https://travis-ci.org/starboychina/AlamofireSwiftyJSON.svg" alt="Build Status"></a>
+<p><a href="https://travis-ci.org/Xinguang/AlamofireSwiftyJSON"><img src="https://travis-ci.org/Xinguang/AlamofireSwiftyJSON.svg" alt="Build Status"></a>
 <a href="https://developer.apple.com/swift/"><img src="https://img.shields.io/badge/swift-3.0-orange.svg" alt="Swift version"></a>
 <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a>
+<a href="https://cocoapods.org/pods/AlamofireSwiftyJSON"><img src="https://img.shields.io/badge/CocoaPods-compatible-4BC51D.svg?style=flat" alt="CocoaPods compatible"></a>
 <a href="https://github.com/realm/SwiftLint"><img src="https://img.shields.io/badge/SwiftLint-passing-brightgreen.svg" alt="SwiftLint"></a>
-<a href="https://codecov.io/gh/starboychina/AlamofireSwiftyJSON?branch=master"><img src="https://codecov.io/github/starboychina/AlamofireSwiftyJSON/coverage.svg?branch=master" alt="codecov.io"></a>
-<a href="https://github.com/starboychina/AlamofireSwiftyJSON/releases"><img src="https://img.shields.io/github/release/starboychina/AlamofireSwiftyJSON.svg" alt="GitHub release"></a></p>
+<a href="https://codecov.io/gh/xinguang/AlamofireSwiftyJSON?branch=master"><img src="https://codecov.io/gh/xinguang/AlamofireSwiftyJSON/branch/master/graph/badge.svg" alt="codecov.io"></a>
+<a href="https://github.com/xinguang/AlamofireSwiftyJSON/releases"><img src="https://img.shields.io/github/release/xinguang/AlamofireSwiftyJSON.svg" alt="GitHub release"></a></p>
 
 <hr>
 
@@ -82,25 +83,52 @@
 <li>Xcode 8.1+</li>
 <li>Swift 3.0+</li>
 </ul>
-<h2 id='install' class='heading'>Install</h2>
+<h2 id='installation' class='heading'>Installation</h2>
+<h3 id='cocoapods' class='heading'>CocoaPods</h3>
 
-<ul>
-<li>CocoaPods</li>
-</ul>
-<pre class="highlight swift"><code><span class="n">source</span> <span class="err">'</span><span class="nv">https</span><span class="p">:</span><span class="c1">//github.com/CocoaPods/Specs.git'</span>
-<span class="nv">platform</span> <span class="p">:</span><span class="n">ios</span><span class="p">,</span> <span class="err">'</span><span class="mf">9.0</span><span class="err">'</span>
-<span class="n">use_frameworks</span><span class="o">!</span>
-
-<span class="n">target</span> <span class="s">"target name"</span> <span class="k">do</span>
-  <span class="n">pod</span> <span class="err">'</span><span class="kt">AlamofireSwiftyJSON</span><span class="err">'</span>
-<span class="n">end</span>
-
+<p><a href="http://cocoapods.org">CocoaPods</a> is a dependency manager for Cocoa projects. You can install it with the following command:</p>
+<pre class="highlight shell"><code><span class="gp">$ </span>gem install cocoapods
 </code></pre>
 
-<ul>
-<li><a href="https://github.com/Carthage/Carthage">Carthage</a></li>
-</ul>
-<pre class="highlight swift"><code><span class="n">github</span> <span class="s">"starboychina/AlamofireSwiftyJSON"</span>
+<blockquote>
+<p>CocoaPods 1.1.0+ is required to build AlamofireSwiftyJSON.</p>
+</blockquote>
+
+<p>To integrate AlamofireSwiftyJSON into your Xcode project using CocoaPods, specify it in your <code>Podfile</code>:</p>
+<pre class="highlight ruby"><code><span class="n">source</span> <span class="s1">'https://github.com/CocoaPods/Specs.git'</span>
+<span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">'9.0'</span>
+<span class="n">use_frameworks!</span>
+
+<span class="n">target</span> <span class="s1">'&lt;Your Target Name&gt;'</span> <span class="k">do</span>
+    <span class="n">pod</span> <span class="s1">'AlamofireSwiftyJSON'</span>
+<span class="k">end</span>
+</code></pre>
+
+<p>Then, run the following command:</p>
+<pre class="highlight shell"><code><span class="gp">$ </span>pod install
+</code></pre>
+<h3 id='carthage' class='heading'>Carthage</h3>
+
+<p><a href="https://github.com/Carthage/Carthage">Carthage</a> is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.</p>
+
+<p>You can install Carthage with <a href="http://brew.sh/">Homebrew</a> using the following command:</p>
+<pre class="highlight shell"><code><span class="gp">$ </span>brew update
+<span class="gp">$ </span>brew install carthage
+</code></pre>
+
+<p>To integrate AlamofireSwiftyJSON into your Xcode project using Carthage, specify it in your <code>Cartfile</code>:</p>
+<pre class="highlight plaintext"><code>github "starboychina/AlamofireSwiftyJSON"
+</code></pre>
+
+<p>Run <code>carthage update</code> to build the framework and drag the built <code>AlamofireSwiftyJSON.framework</code> into your Xcode project.</p>
+<h3 id='swift-package-manager' class='heading'>Swift Package Manager</h3>
+
+<p>The <a href="https://swift.org/package-manager/">Swift Package Manager</a> is a tool for automating the distribution of Swift code and is integrated into the <code>swift</code> compiler. It is in early development, but AlamofireSwiftyJSON does support its use on supported platforms.</p>
+
+<p>Once you have your Swift package set up, adding AlamofireSwiftyJSON as a dependency is as easy as adding it to the <code>dependencies</code> value of your <code>Package.swift</code>.</p>
+<pre class="highlight swift"><code><span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
+    <span class="o">.</span><span class="kt">Package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/Xinguang/AlamofireSwiftyJSON.git"</span><span class="p">,</span> <span class="nv">majorVersion</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">]</span>
 </code></pre>
 <h2 id='usage' class='heading'>Usage</h2>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">URL</span> <span class="o">=</span> <span class="s">"http://httpbin.org/get"</span>
@@ -119,7 +147,7 @@
       </article>
     </div>
     <section class='footer'>
-      <p>&copy; 2017 <a class="link" href="https://github.com/starboychina" target="_blank" rel="external">starboychina</a>. All rights reserved. (Last updated: 2017-06-16)</p>
+      <p>&copy; 2017 <a class="link" href="https://github.com/starboychina" target="_blank" rel="external">starboychina</a>. All rights reserved. (Last updated: 2017-06-30)</p>
       <p>Generated by <a class='link' href='https://github.com/realm/jazzy' target='_blank' rel='external'>jazzy ♪♫ v0.8.2</a>, a <a class='link' href='http://realm.io' target='_blank' rel='external'>Realm</a> project.</p>
     </section>
   </body>
