@@ -3,7 +3,7 @@
 //  AlamofireSwiftyJSON
 //
 //  Created by Hikaru on 2016/01/29.
-//  Copyright © 2016年 Hikaru. All rights reserved.
+//  Copyright (c) 2016 Hikaru. All rights reserved.
 //
 import Alamofire
 import Dispatch

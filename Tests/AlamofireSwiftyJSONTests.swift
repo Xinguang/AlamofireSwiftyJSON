@@ -3,7 +3,7 @@
 //  AlamofireSwiftyJSONTests
 //
 //  Created by Hikaru on 2016/01/30.
-//  Copyright © 2016年 Hikaru. All rights reserved.
+//  Copyright (c) 2016 Hikaru. All rights reserved.
 //
 
 import XCTest
