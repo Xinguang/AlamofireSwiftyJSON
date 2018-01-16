@@ -3,7 +3,7 @@ All notable changes to this project will be documented in this file.
 `AlamofireSwiftyJSON` adheres to [Semantic Versioning](http://semver.org/).
 
 #### 1.x Releases
-- `1.0.x` Releases - [1.0.0](#100)
+- `1.0.x` Releases - [1.0.0](#100) | [1.0.1](#101)
 - `0.2.x` Releases - [0.2.0](#020)
 - `0.1.x` Releases - [0.1.0](#010) | [0.1.1](#011)
 
@@ -11,6 +11,8 @@ All notable changes to this project will be documented in this file.
 
 ## [1.0.0](https://github.com/Xinguang/AlamofireSwiftyJSON/releases/tag/1.0.0)
 Released on June 30, 2017.
+## [1.0.1](https://github.com/Xinguang/AlamofireSwiftyJSON/releases/tag/1.0.1)
+Released on Jan 16, 2018.
 
 #### Added
 - Supports SPM
