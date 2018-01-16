@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "AlamofireSwiftyJSON"
-  s.version          = "1.0.0"
+  s.version          = "1.0.1"
   s.summary          = "Alamofire extension for serialize Data to SwiftyJSON "
   s.homepage         = "https://github.com/Xinguang/AlamofireSwiftyJSON"
   s.license = { :type => 'MIT', :file => 'LICENSE' }
@@ -17,5 +17,5 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.source_files = 'Source/*.swift'
   s.dependency 'Alamofire', '~> 4.0'
-  s.dependency 'SwiftyJSON', '~> 3.0'
+  s.dependency 'SwiftyJSON', '~> 4.0'
 end
