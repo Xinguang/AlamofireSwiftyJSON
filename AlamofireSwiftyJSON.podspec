@@ -18,4 +18,5 @@ Pod::Spec.new do |s|
   s.source_files = 'Source/*.swift'
   s.dependency 'Alamofire', '~> 4.0'
   s.dependency 'SwiftyJSON', '~> 4.0'
+  s.frameworks = 'CFNetwork'
 end

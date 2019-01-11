@@ -383,11 +383,11 @@
 					};
 					D0C479AE1CEC169400CD01FD = {
 						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 1010;
 					};
 					D0C479BA1CEC16EF00CD01FD = {
 						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 1010;
 					};
 					D0C479CA1CEC170A00CD01FD = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -860,6 +860,7 @@
 				PRODUCT_NAME = AlamofireSwiftyJSON;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -882,6 +883,7 @@
 				PRODUCT_NAME = AlamofireSwiftyJSON;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -898,6 +900,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kansea.AlamofireSwiftyJSON-OSX-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -914,6 +917,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kansea.AlamofireSwiftyJSON-OSX-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
