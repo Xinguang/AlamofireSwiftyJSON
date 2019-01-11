@@ -9,6 +9,7 @@
 import XCTest
 import Alamofire
 import SwiftyJSON
+
 import AlamofireSwiftyJSON
 
 private func httpURLResponse(statusCode: Int, headers: HTTPHeaders = [:]) -> HTTPURLResponse {
